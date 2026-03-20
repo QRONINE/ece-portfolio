@@ -4,134 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECE Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #020408;
-        color: #e2e8f0;
-      }
-      /* Add offset to scroll targets to account for the sticky header */
-      [id] {
-        scroll-margin-top: 5rem;
-      }
-      .background-animation {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 0;
-        overflow: hidden;
-        pointer-events: none;
-        background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-      }
-      .stars, .stars-2, .stars-3 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .stars {
-        background-image: 
-          radial-gradient(1.5px 1.5px at 20px 30px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 50px 160px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 80px 120px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 110px 210px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 150px 250px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 190px 40px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 210px 180px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 240px 290px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 280px 140px, #fff, rgba(0,0,0,0));
-        background-size: 300px 300px;
-        opacity: 0.4;
-        animation: stars-move 100s linear infinite;
-      }
-      .stars-2 {
-        background-image: 
-          radial-gradient(1.5px 1.5px at 10px 10px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 150px 50px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 250px 150px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 350px 250px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 50px 350px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 150px 450px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 250px 50px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 350px 150px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 450px 250px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 50px 150px, #fff, rgba(0,0,0,0));
-        background-size: 450px 450px;
-        background-position: 100px 50px;
-        opacity: 0.3;
-        animation: stars-move 150s linear infinite;
-      }
-      .stars-3 {
-        background-image: 
-          radial-gradient(1.5px 1.5px at 50px 50px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 200px 100px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 400px 200px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 100px 300px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 300px 400px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 500px 500px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 50px 550px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2px 2px at 250px 50px, #fff, rgba(0,0,0,0)),
-          radial-gradient(2.5px 2.5px at 450px 150px, #fff, rgba(0,0,0,0)),
-          radial-gradient(1.5px 1.5px at 150px 450px, #fff, rgba(0,0,0,0));
-        background-size: 600px 600px;
-        background-position: -50px 200px;
-        opacity: 0.2;
-        animation: stars-move 200s linear infinite;
-      }
-      @keyframes stars-move {
-        from { transform: translateY(0); }
-        to { transform: translateY(-1000px); }
-      }
-      .blob {
-        position: absolute;
-        border-radius: 50%;
-        opacity: 0.15;
-        filter: blur(120px);
-        will-change: transform;
-      }
-      .blob1 {
-        width: 800px;
-        height: 800px;
-        background: rgba(30, 58, 138, 0.4);
-        animation: move1 40s infinite alternate ease-in-out;
-      }
-      .blob2 {
-        width: 600px;
-        height: 600px;
-        background: rgba(88, 28, 135, 0.3);
-        animation: move2 45s infinite alternate-reverse ease-in-out -5s;
-      }
-      @keyframes move1 {
-        from { transform: translate(-10vw, -20vh) scale(1); }
-        to { transform: translate(60vw, 40vh) scale(1.2); }
-      }
-      @keyframes move2 {
-        from { transform: translate(70vw, 80vh) scale(1.1); }
-        to { transform: translate(10vw, 10vh) scale(0.9); }
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div class="background-animation">
       <div class="stars"></div>
@@ -141,6 +17,6 @@
       <div class="blob blob2"></div>
     </div>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
