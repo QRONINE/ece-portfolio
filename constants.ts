@@ -9,8 +9,8 @@ export const PROJECTS_DATA: Project[] = [
     description: "A 3-DOF robotic arm inspired by Iron Man's 'Dummy', designed for high-precision tasks and future integration with Reinforcement Learning for playing chess.",
     problemSolved: 'Creates an affordable and precise robotic arm platform for hobbyists and researchers, exploring low-cost closed-loop control and advanced AI integration.',
     images: [
-      'assets/igor/CAD MODEL.jpeg',
-      'assets/igor/IMG_20260317_001808.jpg.jpeg',
+      '/assets/igor/CAD MODEL.jpeg',
+      '/assets/igor/IMG_20260317_001808.jpg.jpeg',
     ],
     videoUrl: 'https://www.youtube.com/embed/-7L73LwjPOc', // Placeholder: Rick Astley - Never Gonna Give You Up
     status: 'Under Progress',
@@ -28,8 +28,8 @@ export const PROJECTS_DATA: Project[] = [
     description: "A custom-built retro gaming console based on a Raspberry Pi 3B+, featuring a unique 3D-printed shell inspired by the character BMO from Adventure Time.",
     problemSolved: 'A passion project combining skills in electronics, 3D printing, and software integration to create a unique, portable retro gaming console with a personalized design.',
     images: [
-      'assets/bmo/overall pic.jpg',
-      'assets/bmo/BMS.jpg',
+      '/assets/bmo/overall pic.jpg',
+      '/assets/bmo/BMS.jpg',
       // 'https://picsum.photos/seed/bmo3/800/600',
     ],
     videos: [
@@ -102,10 +102,10 @@ export const PROJECTS_DATA: Project[] = [
     description: 'A chatbot-based QnA for basic medications, pill reminders that send emails, and a buzzer/notification system for aiding the elderly. Equipped with a physical system that can dispense two different types of pills simultaneously.',
     problemSolved: 'Assists the elderly and patients with medication management, improving adherence to prescriptions and providing a simple interface for basic medical queries, thereby reducing the burden on caregivers.',
     images: [
-      'assets/medbot/grppic.jpeg',
-      'assets/medbot/box.jpeg',
-      'assets/medbot/cert pics.jpeg',
-       'assets/medbot/cert.jpeg',
+      '/assets/medbot/grppic.jpeg',
+      '/assets/medbot/box.jpeg',
+      '/assets/medbot/cert pics.jpeg',
+       '/assets/medbot/cert.jpeg',
     ],
     status: 'Completed',
     role: 'Project Lead',
@@ -119,9 +119,9 @@ export const PROJECTS_DATA: Project[] = [
     description: 'Used during emergency situations to deliver food parcels and medicines. Capable of autonomous flight with an ultrasonic collision avoidance system and app-based OTP encryption for unlocking the parcel box.',
     problemSolved: 'Provides a rapid and secure method for delivering critical aid to inaccessible areas during emergencies, reducing response time and ensuring supplies reach the intended recipients.',
     images: [
-      'assets/vdrop/group table.jpg',
-      'assets/vdrop/flight.jpeg',
-      'assets/vdrop/certt.jpeg',
+      '/assets/vdrop/group table.jpg',
+      '/assets/vdrop/flight.jpeg',
+      '/assets/vdrop/certt.jpeg',
     ],
     status: 'Completed',
     role: 'Project Lead',
